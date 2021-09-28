@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    username: postgres
+    initialization-mode: always
+    url: jdbc:postgresql://localhost:5432/course
+    continue-on-error: 'true'
+    password: '{cipher}59518e3a25b1426f60e4d8bf270f5602f05640d2b8f10bec8c66e22332ee3fe4'
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: none
+  liquibase:
+    enabled: 'true'
+    change-log: classpath:/liquibase/update.xml
