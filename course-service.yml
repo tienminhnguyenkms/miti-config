@@ -14,3 +14,12 @@ spring:
   liquibase:
     enabled: 'true'
     change-log: classpath:/liquibase/update.xml
+
+eureka:
+  instance:
+    preferIpAddress: true # registers the IP address of the service rather than the server name
+  client:
+    registerWithEureka: true # registers the service with Eureka
+    fetchRegistry: true # pulls down a local copy of the registry
+    serviceUrl:
+      defaultZone: http://localhost:8070/eureka/
