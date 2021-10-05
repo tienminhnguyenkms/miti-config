@@ -33,16 +33,16 @@ management:
     circuitbreakers:
       enabled: true
 
-resilience4j.circuitbreaker:
-  instances:
-    courseService:
-      registerHealthIndicator: true
-      ringBufferSizeInClosedState: 5
-      ringBufferSizeInHalfOpenState: 3
-      waitDurationInOpenState: 30s
-      failureRateThreshold: 3
-      recordExceptions:
-        - org.springframework.web.client.HttpServerErrorException
-        - java.io.IOException
-        - java.util.concurrent.TimeoutException
-        - org.springframework.web.client.ResourceAccessException
+#resilience4j.circuitbreaker:
+#  instances:
+#    courseService:
+#      registerHealthIndicator: true
+#      ringBufferSizeInClosedState: 5
+#      ringBufferSizeInHalfOpenState: 3
+#      waitDurationInOpenState: 30s
+#      failureRateThreshold: 3
+#      recordExceptions:
+#        - org.springframework.web.client.HttpServerErrorException
+#        - java.io.IOException
+#        - java.util.concurrent.TimeoutException
+#        - org.springframework.web.client.ResourceAccessException
