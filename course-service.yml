@@ -33,16 +33,18 @@ management:
     circuitbreakers:
       enabled: true
 
-#resilience4j.circuitbreaker:
-#  instances:
-#    courseService:
-#      registerHealthIndicator: true
-#      ringBufferSizeInClosedState: 5
-#      ringBufferSizeInHalfOpenState: 3
-#      waitDurationInOpenState: 30s
-#      failureRateThreshold: 3
-#      recordExceptions:
-#        - org.springframework.web.client.HttpServerErrorException
-#        - java.io.IOException
-#        - java.util.concurrent.TimeoutException
-#        - org.springframework.web.client.ResourceAccessException
+resilience4j.circuitbreaker:
+  instances:
+    courseservice:
+      registerHealthIndicator: true
+      slidingWindowSize: 100
+    backendB:
+      registerHealthIndicator: true
+      slidingWindowSize: 10
+      permittedNumberOfCallsInHalfOpenState: 3
+      slidingWindowType: TIME_BASED
+      minimumNumberOfCalls: 20
+      waitDurationInOpenState: 50s
+      failureRateThreshold: 50
+      eventConsumerBufferSize: 10
+      recordFailurePredicate: io.github.robwin.exception.RecordFailurePredicate
