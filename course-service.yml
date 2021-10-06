@@ -38,13 +38,9 @@ resilience4j.circuitbreaker:
     courseservice:
       registerHealthIndicator: true
       slidingWindowSize: 100
-    backendB:
-      registerHealthIndicator: true
-      slidingWindowSize: 10
       permittedNumberOfCallsInHalfOpenState: 3
       slidingWindowType: TIME_BASED
       minimumNumberOfCalls: 20
       waitDurationInOpenState: 20s
       failureRateThreshold: 2
       eventConsumerBufferSize: 10
-      recordFailurePredicate: io.github.robwin.exception.RecordFailurePredicate
