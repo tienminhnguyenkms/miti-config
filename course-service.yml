@@ -41,13 +41,11 @@ management:
         resielence4j:
           circuitbreaker:
             calls: true
-  
-resilience4j.circuitbreaker:
-  configs:
-    default:
-      registerHealthIndicator: true
 
 resilience4j.circuitbreaker:
   instances:
     courseService:
       baseConfig: default
+  configs:
+    default:
+      registerHealthIndicator: true
