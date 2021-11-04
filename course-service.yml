@@ -36,7 +36,8 @@ management:
 resilience4j.circuitbreaker:
   instances:
     courseService:
-      baseConfig: default
-  configs:
-    default:
       registerHealthIndicator: true
+      ringBufferSizeInClosedState: 5
+      ringBufferSizeInHalfOpenState: 3
+      waitDurationInOpenState: 10s
+      failureRateThreshold: 2
