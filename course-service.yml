@@ -33,11 +33,8 @@ management:
     circuitbreakers:
       enabled: true
 
-resilience4j.circuitbreaker:
-  instances:
-    courseService:
-      registerHealthIndicator: true
-      ringBufferSizeInClosedState: 5
-      ringBufferSizeInHalfOpenState: 3
-      waitDurationInOpenState: 10s
-      failureRateThreshold: 2
+resilience4j:
+  circuitbreaker:
+    instances:
+      courseService:
+        baseConfig: default
