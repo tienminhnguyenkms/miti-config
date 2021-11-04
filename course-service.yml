@@ -33,14 +33,14 @@ management:
     circuitbreakers:
       enabled: true
 
-resilience4j.circuitbreaker:
-  instances:
-    courseservice:
-      registerHealthIndicator: true
-      slidingWindowSize: 100
-      permittedNumberOfCallsInHalfOpenState: 3
-      slidingWindowType: TIME_BASED
-      minimumNumberOfCalls: 20
-      waitDurationInOpenState: 20s
-      failureRateThreshold: 2
-      eventConsumerBufferSize: 10
+# resilience4j.circuitbreaker:
+#   instances:
+#     courseservice:
+#       registerHealthIndicator: true
+#       slidingWindowSize: 100
+#       permittedNumberOfCallsInHalfOpenState: 3
+#       slidingWindowType: TIME_BASED
+#       minimumNumberOfCalls: 20
+#       waitDurationInOpenState: 20s
+#       failureRateThreshold: 2
+#       eventConsumerBufferSize: 10
