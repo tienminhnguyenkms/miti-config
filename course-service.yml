@@ -32,6 +32,7 @@ management:
     health:
       enabled: true
       show-details: true
+    enabled-by-default: false
 
 # resilience4j:
 #   circuitbreaker:
