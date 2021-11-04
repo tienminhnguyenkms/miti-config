@@ -54,11 +54,11 @@ management.endpoint.health:
   enabled: true
   show-details: always
 
-resilience4j.circuitbreaker:
-  instances:
-    licenseService:
-      registerHealthIndicator: true
-      ringBufferSizeInClosedState: 5
-      ringBufferSizeInHalfOpenState: 3
-      waitDurationInOpenState: 10s
-      failureRateThreshold: 50
+# resilience4j.circuitbreaker:
+#   instances:
+#     licenseService:
+#       registerHealthIndicator: true
+#       ringBufferSizeInClosedState: 5
+#       ringBufferSizeInHalfOpenState: 3
+#       waitDurationInOpenState: 10s
+#       failureRateThreshold: 50
