@@ -32,6 +32,11 @@ management:
   health:
     circuitbreakers:
       enabled: true
+  
+resilience4j.circuitbreaker:
+  configs:
+    default:
+      registerHealthIndicator: true
 
 # resilience4j.circuitbreaker:
 #   instances:
