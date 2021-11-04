@@ -32,6 +32,7 @@ management:
   health:
     circuitbreakers:
       enabled: true
+    show-details: true
 
 resilience4j:
   circuitbreaker:
