@@ -23,3 +23,13 @@ eureka:
     fetchRegistry: true
     serviceUrl:
       defaultZone: http://localhost:8070/eureka/
+
+keycloak:
+  realm: miti-realm
+  auth-server-url: http://localhost:8080/auth
+  ssl-required: external
+  resource: miti
+  credentials:
+    secret: 95d11aa8-d228-48f0-b241-351aad83d958
+  use-resource-role-mappings: true
+  bearer-only: true
