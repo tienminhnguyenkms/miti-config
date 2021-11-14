@@ -39,3 +39,5 @@ keycloak:
     secret: 95d11aa8-d228-48f0-b241-351aad83d958
   use-resource-role-mappings: true
   bearer-only: true
+
+miti: abc
