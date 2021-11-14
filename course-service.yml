@@ -40,4 +40,4 @@ keycloak:
   use-resource-role-mappings: true
   bearer-only: true
 
-miti: abc
+miti: xyz
